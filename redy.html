@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link  rel='stylesheet' href = "redy.css" type='text/css'> 
+       <title>CLOCK</title>
+       <style>
+           body {
+    border: 5px double lightgreen;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    background-color: black;
+    color: lightgreen;
+    font-family: 'Orbitron', sans-serif;"
+}
+       </style>
+    </head>
+    <body>
+       <script>
+           var nameDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var nameMonth = new Array ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+function addO(x) {
+    return x < 10 ? "0" + String(x) : String(x);
+}
+  function myClock() {
+   var dt = new Date();
+    var y = dt.getFullYear();
+    var m = dt.getMonth();
+    var d = addO(dt.getDate());
+    var a = dt.getDay();
+    var h = addO(dt.getHours());
+    var i =addO(dt.getMinutes());
+    var s = addO(dt.getSeconds());
+    document.body.innerHTML = d + "-" + nameMonth[dt.getMonth()] + "-" + y + "<br/>" + nameDay[dt.getDay()] + "<br/>" + h + ":" + i + ":" + s;
+  }
+setInterval(myClock, 1000);
+       </script>   
+       <h1>Hi,This is Narayana reddy </h1>
+    </body>
+</html>
